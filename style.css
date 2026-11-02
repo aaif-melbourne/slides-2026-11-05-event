@@ -1,22 +1,51 @@
+/* Typefaces used in the AAIF branded slide template, served locally. */
+@font-face {
+  font-family: 'Instrument Sans';
+  src: url('/fonts/instrument-sans.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'JetBrains Mono';
+  src: url('/fonts/jetbrains-mono.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 100 800;
+  font-display: swap;
+}
+
 :root {
-  --aaif-blue: #168fa3;
-  --aaif-purple: #9550a5;
-  --ink: #121826;
-  --muted: #5d6677;
-  --surface: #f3f6f8;
-  --line: #d9e1e8;
+  --aaif-blue: #087f79;
+  --aaif-purple: #087f79;
+  --ink: #0a0a0a;
+  --muted: #4a4a4a;
+  --surface: #f5f5f2;
+  --line: #cfcfc9;
 }
 
 .slidev-layout {
   background: #fff;
   color: var(--ink);
+  font-family: 'Instrument Sans', sans-serif;
   font-size: 1.55rem;
-  padding: 3rem 3.5rem 2.8rem;
+  padding: 4.5rem 3.5rem 3.3rem;
+}
+
+/* Reuse the existing AAIF artwork without recolouring any brand assets. */
+.slidev-layout:not(.blank-slide):not(.aaif-banner-slide)::before {
+  background: url('/logos/aaif.svg') left center / contain no-repeat;
+  content: '';
+  height: 1.55rem;
+  left: 3.5rem;
+  position: absolute;
+  top: 1.4rem;
+  width: 6.4rem;
 }
 
 .slidev-layout h1 {
-  font-size: 2.45rem;
-  letter-spacing: -0.05em;
+  font-size: 2.3rem;
+  letter-spacing: -0.035em;
   line-height: 1.05;
 }
 
@@ -53,7 +82,8 @@
 }
 
 .hero-art {
-  bottom: 0;
+  /* Footer bottom margin + text line + top padding + border. */
+  bottom: calc(1rem + 0.9rem + 0.55rem + 1px);
   position: absolute;
   right: 0;
   top: 0;
@@ -74,12 +104,6 @@
   height: 100%;
   object-fit: cover;
   width: 100%;
-}
-
-.slidev-layout:has(.hero-art) .footer-meta {
-  color: #fff;
-  font-weight: 700;
-  text-shadow: 0 1px 3px rgb(18 24 38 / 90%);
 }
 
 .hero h1 {
@@ -121,7 +145,7 @@
 .audience-card {
   background: var(--surface);
   border: 1px solid var(--line);
-  border-radius: 1rem;
+  border-radius: 0;
 }
 
 .foundation-map {
@@ -134,8 +158,7 @@
   align-items: center;
   background: #fff;
   border: 1px solid var(--line);
-  border-radius: 0.75rem;
-  box-shadow: 0 0.25rem 0.8rem rgb(18 24 38 / 7%);
+  border-radius: 0;
   display: flex;
   justify-content: center;
 }
@@ -175,15 +198,15 @@
 }
 
 .foundation-lane {
-  border-radius: 1rem;
+  border-radius: 0;
   display: flex;
   flex-direction: column;
   min-height: 13.25rem;
   padding: 0.75rem 1rem 0.9rem;
 }
 
-.cloud-native-lane { background: #eef5fc; }
-.agentic-lane { background: linear-gradient(135deg, #eef8f8, #f7eff8); }
+.cloud-native-lane { background: var(--surface); }
+.agentic-lane { background: var(--surface); }
 
 .foundation-label {
   color: var(--muted);
@@ -268,11 +291,11 @@
   display: grid;
   gap: 1.2rem;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  margin-top: 2.2rem;
+  margin-top: 1.6rem;
 }
 
 .audience-card {
-  min-height: 15rem;
+  min-height: 13.5rem;
   padding: 1.4rem 1.55rem;
   position: relative;
 }
@@ -290,7 +313,7 @@
 }
 
 .accent-card {
-  background: linear-gradient(145deg, #168fa3, #42679f 55%, #9550a5);
+  background: var(--ink);
   border: 0;
   color: #fff;
 }
@@ -333,86 +356,67 @@
 
 .expectation-grid {
   display: grid;
-  gap: 1.25rem;
+  gap: 3rem;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  margin-top: 2.1rem;
+  margin-top: 2rem;
 }
-
-.expectation-card {
-  border: 1px solid var(--line);
-  border-radius: 1.2rem;
-  min-height: 17.5rem;
-  overflow: hidden;
-  padding: 1.45rem;
-}
-
-.kindness-card { background: #eef7f8; }
-.curiosity-card { background: linear-gradient(145deg, #f2f4fb, #f8eff8); }
 
 .expectation-heading {
-  align-items: center;
   display: flex;
-  gap: 0.8rem;
+  flex-direction: column;
+  gap: 0.3rem;
 }
 
 .expectation-heading > span {
-  align-items: center;
-  background: #fff;
-  border: 1px solid var(--line);
-  border-radius: 50%;
   color: var(--aaif-blue);
-  display: flex;
-  font-size: 0.65rem;
-  font-weight: 800;
-  height: 2rem;
-  justify-content: center;
-  width: 2rem;
+  font-size: 0.8rem;
+  line-height: 1;
 }
 
-.curiosity-card .expectation-heading > span { color: var(--aaif-purple); }
-
 .expectation-heading strong {
-  font-size: 2rem;
-  letter-spacing: -0.045em;
+  font-size: 2.3rem;
+  font-weight: 700;
+  letter-spacing: -0.035em;
+  line-height: 1.1;
 }
 
 .expectation-actions {
+  border-top: 1px solid var(--ink);
   display: grid;
-  gap: 0.65rem;
-  margin-top: 1.25rem;
+  margin-top: 0.9rem;
 }
 
 .expectation-actions > div {
-  background: rgb(255 255 255 / 72%);
-  border-radius: 0.7rem;
-  padding: 0.7rem 0.9rem;
+  padding: 0.9rem 0;
+}
+
+.expectation-actions > div + div {
+  border-top: 1px solid var(--line);
 }
 
 .expectation-actions strong {
   display: block;
-  font-size: 0.9rem;
+  font-size: 1.1rem;
   line-height: 1.2;
 }
 
 .expectation-actions span {
   color: var(--muted);
   display: block;
-  font-size: 0.68rem;
-  margin-top: 0.18rem;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  margin-top: 0.25rem;
 }
 
 .organiser-grid {
   display: grid;
   gap: 0.72rem;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr) minmax(0, 1fr);
   margin-top: 1.35rem;
 }
 
 .organiser {
   align-items: center;
-  background: var(--surface);
-  border: 1px solid var(--line);
-  border-radius: 0.8rem;
   display: grid;
   gap: 0.8rem;
   grid-template-columns: 4.15rem 1fr;
@@ -422,7 +426,7 @@
 }
 
 .organiser img {
-  border-radius: 0.55rem;
+  border-radius: 50%;
   height: 4.15rem;
   object-fit: cover;
   width: 4.15rem;
@@ -430,7 +434,8 @@
 
 .organiser strong {
   display: block;
-  font-size: 0.88rem;
+  font-size: 1.2rem;
+  font-weight: 700;
   line-height: 1.2;
 }
 
@@ -441,8 +446,9 @@
   border: 0 !important;
   color: var(--muted);
   display: flex;
+  font-family: 'JetBrains Mono', monospace;
   font-size: 0.62rem;
-  font-weight: 650;
+  font-weight: 400;
   gap: 0.28rem;
   margin-top: 0.35rem;
   min-width: 0;
@@ -461,18 +467,18 @@
   display: grid;
   gap: 1.2rem;
   grid-template-columns: 0.82fr 1.18fr;
-  margin-top: 2.4rem;
+  margin-top: 1.8rem;
 }
 
 .sponsor-group {
   border: 1px solid var(--line);
-  border-radius: 1.15rem;
+  border-radius: 0;
   min-height: 17rem;
   padding: 1.45rem;
 }
 
-.venue-sponsors { background: #eef7f8; }
-.hospitality-sponsors { background: linear-gradient(145deg, #f2f4fb, #f8eff8); }
+.venue-sponsors { background: var(--surface); }
+.hospitality-sponsors { background: var(--surface); }
 
 .sponsor-label {
   color: var(--aaif-blue);
@@ -493,8 +499,8 @@
 
 .sponsor-logo {
   align-items: center;
-  background: rgb(255 255 255 / 78%);
-  border-radius: 0.75rem;
+  background: #fff;
+  border-radius: 0;
   display: flex;
   justify-content: center;
   min-height: 3.35rem;
@@ -517,6 +523,11 @@
   margin-right: auto;
   max-width: 36rem;
   text-align: center;
+}
+
+.single-sponsor:not(.outro-sponsors) .sponsor-group {
+  background: transparent;
+  border: 0;
 }
 
 .single-sponsor .sponsor-logo { border: 0; }
@@ -544,7 +555,7 @@
 .agenda-item {
   align-items: center;
   background: var(--surface);
-  border-radius: 0.8rem;
+  border-radius: 0;
   display: grid;
   gap: 0.3rem 0.85rem;
   grid-template-columns: 3.5rem 5.6rem 1fr;
@@ -584,7 +595,7 @@
 }
 
 .featured {
-  background: linear-gradient(100deg, #e9f6f7, #f4edf7);
+  background: #edf7f6;
 }
 
 .timeline {
@@ -630,7 +641,7 @@
 
 .speaker-thanks div {
   background: var(--surface);
-  border-radius: 1rem;
+  border: 1px solid var(--line);
   padding: 1.2rem 1.4rem;
 }
 
@@ -882,12 +893,12 @@
 
 .time-block,
 .social-copy {
-  border-radius: 1.1rem;
+  border-radius: 0;
   padding: 2rem;
 }
 
 .time-block {
-  background: linear-gradient(145deg, #168fa3, #42679f 55%, #9550a5);
+  background: var(--ink);
   color: #fff;
 }
 
@@ -906,9 +917,9 @@
 
 .aaif-banner-slide {
   background:
-    radial-gradient(circle at 15% 90%, rgb(12 44 52 / 75%), transparent 42%),
-    radial-gradient(circle at 88% 8%, rgb(55 18 54 / 55%), transparent 38%),
-    linear-gradient(105deg, #168fa3 0%, #42679f 38%, #9550a5 66%, #9b3978 100%);
+    radial-gradient(ellipse at top left, #252552, transparent 65%),
+    radial-gradient(ellipse at bottom right, #073b3a, transparent 65%),
+    #0a0a0a;
   height: 100% !important;
   overflow: hidden;
   padding: 0 !important;
@@ -940,16 +951,81 @@
 .aaif-qr .qr-frame { background: transparent; }
 
 .common-footer {
+  border-top: 1px solid var(--line);
   bottom: 1rem;
   color: var(--muted);
   display: flex;
-  font-size: 0.68rem;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.6rem;
+  line-height: 1.5;
   justify-content: space-between;
   left: 3.5rem;
   position: absolute;
+  padding-top: 0.55rem;
   right: 3.5rem;
   z-index: 10;
 }
 
 .common-footer a { color: inherit; text-decoration: none; }
 .footer-meta { flex-shrink: 0; margin-left: 1.5rem; }
+
+/* Closing slides: one bold title, quieter supporting copy, mono metadata. */
+.closing-slide h1 {
+  font-size: 2.6rem;
+  font-weight: 700;
+}
+
+.closing-slide .statement,
+.closing-slide .social-copy {
+  font-size: 1.65rem;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  line-height: 1.3;
+}
+
+.closing-slide .speaker-thanks strong {
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.closing-slide .speaker-thanks span,
+.closing-slide .qr-layout a,
+.closing-slide .event-date,
+.closing-slide .conference-qr span,
+.closing-slide .sponsor-label,
+.closing-slide .applause,
+.closing-slide .time-block strong {
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+
+.closing-slide .qr-layout a {
+  display: inline-block;
+  font-size: 0.8rem;
+  line-height: 1.4;
+}
+
+.closing-slide .speaker-thanks span,
+.closing-slide .conference-qr span,
+.closing-slide .sponsor-label,
+.closing-slide .applause {
+  font-size: 0.8rem;
+  line-height: 1.5;
+}
+
+.closing-slide .applause { color: var(--muted); }
+.closing-slide .time-block strong { font-size: 1.8rem; }
+
+.eyebrow,
+.hero-meta,
+.foundation-label,
+.audience-number,
+.expectation-heading > span,
+.sponsor-label,
+.agenda-kind,
+.timeline {
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 400;
+  letter-spacing: 0.025em;
+}

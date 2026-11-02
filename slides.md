@@ -16,7 +16,7 @@ mdc: true
 <div class="qr-layout">
   <div>
     <img class="outlook-title" src="/conferences/outlook-ai-wordmark.png" alt="Outlook: AI" />
-    <p><strong>1 ticket to win · Valued at $600</strong></p>
+    <p><strong>2 tickets to win · Valued at $600 each</strong></p>
     <p>Thursday 12 November 2026<br />Collins Square Events Centre<br />Docklands, Melbourne</p>
     <a href="https://theoutlook.io/events/outlook-ai">Conference details → theoutlook.io</a>
   </div>
@@ -27,7 +27,7 @@ mdc: true
 </div>
 
 <!--
-We're giving away one ticket to Outlook: AI, valued at $600, on Thursday 12 November at Collins Square Events Centre in Docklands, Melbourne.
+We're giving away two tickets to Outlook: AI, valued at $600 each, on Thursday 12 November at Collins Square Events Centre in Docklands, Melbourne.
 
 Scan the QR code and complete the form for your chance to win.
 -->
@@ -355,6 +355,8 @@ The following slides are the outro section.
 -->
 
 ---
+class: closing-slide
+---
 
 # Thank you to our speakers
 
@@ -378,6 +380,8 @@ Let's give all four speakers one more round of applause.
 -->
 
 ---
+class: closing-slide
+---
 
 # How did we do?
 
@@ -385,7 +389,7 @@ Let's give all four speakers one more round of applause.
   <div>
     <div class="statement">Help us make the next event better.</div>
     <p>Just 5 short questions.<br />It should take one minute.</p>
-    <a style="overflow-wrap: anywhere;" href="https://docs.google.com/forms/d/e/1FAIpQLScg3QYGmUBnWaOaMw8E6cEwW-3AX0ZOKvkCv9gjKDXf57i3MA/viewform?usp=dialog">https://docs.google.com/forms/d/e/1FAIpQLScg3QYGmUBnWaOaMw8E6cEwW-3AX0ZOKvkCv9gjKDXf57i3MA/viewform?usp=dialog</a>
+    <a style="display: inline-block; line-height: 1.4; overflow-wrap: anywhere;" href="https://docs.google.com/forms/d/e/1FAIpQLScg3QYGmUBnWaOaMw8E6cEwW-3AX0ZOKvkCv9gjKDXf57i3MA/viewform?usp=dialog">https://docs.google.com/forms/d/e/1FAIpQLScg3QYGmUBnWaOaMw8E6cEwW-3AX0ZOKvkCv9gjKDXf57i3MA/viewform?usp=dialog</a>
   </div>
   <ProjectQr value="https://docs.google.com/forms/d/e/1FAIpQLScg3QYGmUBnWaOaMw8E6cEwW-3AX0ZOKvkCv9gjKDXf57i3MA/viewform?usp=dialog" :size="260" />
 </div>
@@ -396,6 +400,8 @@ Before we wrap up, we'd really value your feedback on tonight's event.
 It's just five short questions and should take one minute. Please scan the QR code and let us know what worked and what we could make better next time.
 -->
 
+---
+class: closing-slide
 ---
 
 # What are you building?
@@ -420,16 +426,18 @@ So please scan the QR code to submit to our call for papers. If you're unsure wh
 -->
 
 ---
+class: closing-slide
+---
 
 # Next month
 
 <div class="qr-layout">
   <div>
     <div class="statement">Save the date.</div>
-    <p style="font-size: 1.2em;">Thursday 3 December 2026</p>
-    <a style="font-size: 1.1em;" href="https://luma.com/30lmni6n">luma.com/30lmni6n</a>
-    <p style="font-size: 1em;">Follow the Melbourne community Luma page<br />to be notified of all future events.</p>
-    <a style="font-size: 1em;" href="https://aimelb.org">aimelb.org</a>
+    <p class="event-date">Thursday 3 December 2026</p>
+    <a href="https://luma.com/30lmni6n">luma.com/30lmni6n</a>
+    <p>Follow the Melbourne community Luma page<br />to be notified of all future events.</p>
+    <a href="https://aimelb.org">aimelb.org</a>
   </div>
   <ProjectQr value="https://luma.com/30lmni6n" :size="260" />
 </div>
@@ -441,13 +449,15 @@ Scan this QR code to open the event page, and follow the Melbourne community Lum
 -->
 
 ---
+class: closing-slide
+---
 
 # Win a conference ticket
 
 <div class="qr-layout">
   <div>
     <img class="outlook-title" src="/conferences/outlook-ai-wordmark.png" alt="Outlook: AI" />
-    <p><strong>1 ticket to win · Valued at $600</strong></p>
+    <p><strong>2 tickets to win · Valued at $600 each</strong></p>
     <p>Thursday 12 November 2026<br />Collins Square Events Centre<br />Docklands, Melbourne</p>
     <a href="https://theoutlook.io/events/outlook-ai">Conference details → theoutlook.io</a>
   </div>
@@ -458,11 +468,13 @@ Scan this QR code to open the event page, and follow the Melbourne community Lum
 </div>
 
 <!--
-We're giving away one ticket to Outlook: AI, valued at $600, on Thursday 12 November at Collins Square Events Centre in Docklands, Melbourne.
+We're giving away two tickets to Outlook: AI, valued at $600 each, on Thursday 12 November at Collins Square Events Centre in Docklands, Melbourne.
 
 Scan the QR code and complete the form for your chance to win.
 -->
 
+---
+class: closing-slide
 ---
 
 # Thank you to our sponsor
@@ -484,6 +496,8 @@ Thank you to Iress for the venue, food, and drinks.
 Please help us leave the venue as we found it, and take a moment to thank our hosts if you see them tonight.
 -->
 
+---
+class: closing-slide
 ---
 
 # Keep the conversation going
