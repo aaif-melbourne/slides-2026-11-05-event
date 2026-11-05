@@ -312,7 +312,7 @@ One ask for everyone: please be respectful of the venue and clean up after yours
   </div>
   <div class="agenda-item">
     <img class="agenda-speaker" src="/speakers/ben-hudson.png" alt="Ben Hudson" />
-    <span class="agenda-kind">Lightning<br />Talk</span><strong>Measuring User Value for MCP Servers</strong><span>Ben Hudson · Head of Open Source & Product Lead @ Atlan</span>
+    <span class="agenda-kind">Lightning<br />Talk</span><strong>An Open Standard for Agent Registries</strong><span>Ben Hudson · Head of Open Source & Product Lead @ Atlan</span>
   </div>
   <div class="agenda-item">
     <img class="agenda-speaker" src="/speakers/scott-van-kalken.jpeg" alt="Scott van Kalken" />
@@ -333,7 +333,7 @@ Doug is giving our main talk, followed by lightning talks from Ben, Scott, and J
 
 Doug will share CultureAmp's agentic coding journey with 200 engineers.
 
-Ben will cover measuring user value for MCP servers.
+Ben will cover an open standard for agent registries.
 
 Scott will explain how to break a high level goal into executable steps.
 
